@@ -21,11 +21,11 @@ var app = express();
 // require dotenv
 require('dotenv').config();
 
-// mongoose connections
-//var mongoose = require('mongoose');
-//mongoose.connect(process.env.DATABASE);
-//var contactmodel = require('./models/contact');
-//var registermodel = require('./models/register');
+ //mongoose connections
+var mongoose = require('mongoose');
+mongoose.connect(process.env.DATABASE);
+var contactmodel = require('./models/contact');
+var registermodel = require('./models/register');
 
 
 
