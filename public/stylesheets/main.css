@@ -1,0 +1,35 @@
+*{box-sizing: border-box;}
+
+.myheader::before{
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 0px;
+    right: 0px;
+    background-size: cover;
+    top: 0px;
+    background-attachment: fixed;
+    background-image: url(../images/samsung.jpg);
+    position: absolute;
+    left: 0px;
+}
+
+.myheader{
+    position: relative;
+    height: 440px;
+}
+
+.myheader p,h1,a{
+    position: relative;
+    color: gray;
+}
+
+
+h1{
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+
+.footer-links li a{
+    text-decoration: none !important;
+}

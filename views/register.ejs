@@ -1,0 +1,50 @@
+
+    <h1 style="text-align:center;">Registertion</h1>
+    <hr>
+
+    <form style="background-color:azure;" action="/register/addstudent" method="post">
+        <input style="margin-left:400px; margin-top: px;" type="text" name="name" id="name" placeholder="Name"><br>
+        <input style="margin-left:400px; margin-top: 10px;" type="text" name="lastname" id="lastname" placeholder="lastname"><br>
+        <input style="margin-left:400px; margin-top: 10px;" type="email" name="email" id="email" placeholder="Email"><br>
+        <input style="margin-left: 450px; margin-top: 10px;" type="submit" name="submit" id="submit">
+    </form>
+
+<hr>
+<h3 style="text-align:center ;">Students Registered Lest</h3>
+
+<table style="border:1px solid ; width: 100%; border-collapse: collapse; background-color: azure;">
+    <tr style="text-align: center;">
+        <th style="border:2px solid; ">Name</th>
+        <th style="border:2px solid ;">lastname</th>
+        <th style="border:2px solid ;">Email</th>
+        <th style="border:2px solid ;">Action</th>
+    </tr>
+    <% students.forEach(function(st){ %>
+
+
+    <tr>
+        <td style="border: 1px solid ; padding-left: 5px; font-size: larger;"><%- st.name %></td>
+        <td style="border:1px solid; padding-left: 5px;"><%- st.lastname %></td>
+        <td style="border:1px solid; padding-left: 5px;"><%- st.email %></td>
+          
+        
+            <td style="border: 1px solid;">
+            <a href="/register/delete/<%= st._id %>"><button type="button" class="btn btn-dark " style="font-size: 15px;">
+            <i class="fa-solid fa-trash-can" style="font-size:15px;"></i></button></a>
+
+            <a href="/register/edit/<%= st._id %>"><button type="button" class="btn btn-dark " style="font-size: 15px">
+                <span class="button--text"></span>
+                <i class="fas fa-edit"></i>
+                <span class="button--icon"></span>
+                    <ion-icon name="create-outline" style="font-size: 15px;"></ion-icon>
+        
+                </span>
+            </button></a>
+            </td>
+    
+ 
+
+    </tr> 
+
+ <% }) %>
+</table>

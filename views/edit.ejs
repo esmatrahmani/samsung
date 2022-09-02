@@ -1,0 +1,10 @@
+<h1 style="text-align:center;">Edit form</h1>
+    <hr>
+
+    <form action="/register/update" method="post">
+        <input type="hidden" name="id" id="id" value="<%= mydata._id %>">
+        <input type="text" name="name" id="name" value="<%= mydata.name %>" placeholder="Name"><br>
+        <input type="text" name="lastname" id="lastname" value="<%= mydata.lastname %>"  placeholder="lastname"><br>
+        <input type="email" name="email" id="email" value="<%= mydata.email %>"  placeholder="Email"><br>
+        <input type="submit" name="submit" id="submit">
+    </form>
